@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Projects</title>
+    <link rel="stylesheet" href="projects.css">
+   
+  </head>
+  <body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./Projects.html">Projects</a>
+        <a href="./course.html">Courses</a>
+      </nav>
+    <header>
+      <h1>My Projects</h1>
+    </header>
+    <div class="container">
+      <div class="filter-box">
+        <label for="technology-filter">Filter by Technology:</label>
+        <input type="text" id="technology-filter" name="technology-filter">
+      </div>
+      <div id="project-list">
+        <div class="project" data-technology="C#">
+          <h2>Project 1</h2>
+          <p>C# Project</p>
+        </div>
+        <div class="project" data-technology="Java">
+          <h2>Project 2</h2>
+          <p>Java Project</p>
+        </div>
+        <div class="project" data-technology="Node.js">
+          <h2>Project 3</h2>
+          <p>Node.js Project</p>
+        </div>
+        <div class="project" data-technology="C#">
+            <h2>Project 4</h2>
+          <p>C# Project</p>
+        </div>
+        <div class="project" data-technology="Java">
+          <h2>Project 5</h2>
+          <p>Java Project</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Filter the project list based on the technology filter input
+      document.getElementById("technology-filter").addEventListener("keyup", function() {
+        var filter = this.value.toUpperCase();
+        var projects = document.getElementsByClassName("project");
+        for (var i = 0; i < projects.length; i++) {
+          var technology = projects[i].getAttribute("data-technology");
+          if (technology.toUpperCase().indexOf(filter) > -1) {
+            projects[i].style.display = "";
+          } else {
+            projects[i].style.display = "none";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

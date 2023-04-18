@@ -1,0 +1,72 @@
+/* CSS for the page layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(205, 253, 186);
+
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  /* CSS for the project list */
+  .project {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  /* CSS for the filter box */
+  .filter-box {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .filter-box label {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  .filter-box input[type="text"] {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  /* CSS for the navbar */
+  nav {
+    background-color: #f2f2f2;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+  }
+  nav a:hover {
+    color: #000;
+    font-weight: bold;
+  }
