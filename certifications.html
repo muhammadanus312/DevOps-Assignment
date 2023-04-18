@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List of Courses</title>
+    <link rel="stylesheet" href="course.css">
+  
+  </head>
+  <body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./Projects.html">Projects</a>
+        <a href="./course.html">Courses</a>
+        <a href="./certifications.html">Certifications</a>
+      </nav>
+      <div class="heading">
+        <h1>My Certifications</h1>
+      </div>
+    <div class="container">
+      
+      <div class="course-list">
+        <!-- Generate course HTML dynamically from course project array -->
+        <script>
+          const certifications = [
+            {
+              title: 'Programming Fundamental',
+              description: 'Description ',
+            },
+            {
+              title: 'Object Oriented Programming',
+              description: 'Description ',
+            },
+            {
+              title: 'Agile Project Management',
+              description: 'Description ',
+            },
+            {
+              title: 'Data Structures',
+              description: 'Description',
+            },
+            {
+              title: 'Artificial Intelligence',
+              description: 'Description',
+            },
+           
+          ];
+
+          const courseList = document.querySelector('.course-list');
+
+          // Generate HTML for each course and append to course list container
+          certifications.forEach(course => {
+            const courseElement = document.createElement('div');
+            courseElement.classList.add('course');
+            courseElement.setAttribute('data-technology', course.technology);
+            courseElement.innerHTML = `
+              <h2>${course.title}</h2>
+              <p>${course.description}</p>
+            `;
+            courseList.appendChild(courseElement);
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
